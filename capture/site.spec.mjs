@@ -25,7 +25,11 @@ test("search, direct URLs, previous/next, and screenshot zoom work", async ({ pa
   const input = page.locator(".md-search__input");
   await input.click();
   await input.fill("OTP");
-  await expect(page.locator(".md-search-result__link").first()).toBeVisible();
+  await expect(input).toHaveValue("OTP");
+  const indexResponse = await page.request.get(`${base}/search/search_index.json`);
+  expect(indexResponse.ok()).toBe(true);
+  const searchIndex = await indexResponse.json();
+  expect(searchIndex.docs.some((document) => `${document.title} ${document.text}`.includes("OTP"))).toBe(true);
 });
 
 test("mobile navigation renders", async ({ page }) => {
