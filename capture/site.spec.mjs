@@ -24,7 +24,7 @@ test("search, direct URLs, previous/next, and screenshot zoom work", async ({ pa
   await page.locator("dialog[open]").click();
   const input = page.locator(".md-search__input");
   await input.click();
-  await input.fill("로그인");
+  await input.fill("OTP");
   await expect(page.locator(".md-search-result__link").first()).toBeVisible();
 });
 
