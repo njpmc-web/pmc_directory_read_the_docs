@@ -1,0 +1,20 @@
+:root {
+  --md-primary-fg-color: #0077bd;
+  --md-primary-fg-color--dark: #005f9e;
+  --md-accent-fg-color: #0097d7;
+}
+
+.md-typeset figure { margin: 1.5rem auto; }
+.md-typeset figure img {
+  border: 1px solid #dbe4ea;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.35rem 1.25rem rgb(15 23 42 / 12%);
+  cursor: zoom-in;
+  height: auto;
+  max-height: 46rem;
+  object-fit: contain;
+}
+.md-typeset figcaption { color: #475569; font-size: .75rem; max-width: 48rem; }
+.md-typeset .mobile-shot img { max-width: 390px; width: 100%; }
+.md-typeset .desktop-shot img { width: 100%; }
+@media (max-width: 600px) { .md-typeset figure { margin-inline: 0; } }

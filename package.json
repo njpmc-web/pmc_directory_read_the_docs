@@ -1,0 +1,13 @@
+{
+  "name": "pmc-directory-manual-capture",
+  "private": true,
+  "scripts": {
+    "capture": "playwright test capture/screenshots.spec.mjs",
+    "check": "python3 scripts/validate_docs.py",
+    "test:site": "playwright test --config playwright.site.config.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "sharp": "0.35.3"
+  }
+}

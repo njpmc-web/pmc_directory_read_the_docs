@@ -1,0 +1,104 @@
+site_name: PMC Directory 사용자 매뉴얼
+site_description: PMC 교인 정보 확인 앱 공식 사용자 매뉴얼
+site_url: https://pmc-directory-manual.readthedocs.io/
+repo_url: https://github.com/njpmc-web/pmc_directory_read_the_docs
+repo_name: njpmc-web/pmc_directory_read_the_docs
+copyright: Copyright &copy; Pilgrim Mission Church
+docs_dir: docs
+strict: true
+
+theme:
+  name: material
+  language: ko
+  logo: assets/PMC_logo_icon.png
+  favicon: assets/PMC_logo_icon.png
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.tooltips
+  palette:
+    primary: light blue
+    accent: blue
+
+plugins:
+  - search:
+      lang:
+        - ko
+        - en
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: false
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: ko
+          name: 한국어
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            홈: Home
+            빠른 시작: Quick start
+            기능 개요: Feature overview
+            역할별 접근 권한: Access by role
+            회원: Members
+            로그인: Sign in
+            가족 정보: Family information
+            정보 수정 및 인증: Edits and verification
+            사진 요청: Photo requests
+            요청 관리: Manage requests
+            직원: Staff
+            관리자 로그인 및 교인 검색: Admin sign-in and member search
+            미등록 번호 검토: Unregistered-number review
+            요청 처리: Process requests
+            로그인 기록·설정·권한: Logs, settings, and permissions
+            문제 해결: Troubleshooting
+            개인정보 안내: Privacy
+            용어집: Glossary
+            지원 요청: Get support
+
+nav:
+  - 홈: index.md
+  - 빠른 시작: quick-start.md
+  - 기능 개요: features.md
+  - 역할별 접근 권한: access.md
+  - 회원:
+      - 로그인: member/login.md
+      - 가족 정보: member/family.md
+      - 정보 수정 및 인증: member/edit.md
+      - 사진 요청: member/photos.md
+      - 요청 관리: member/requests.md
+  - 직원:
+      - 관리자 로그인 및 교인 검색: admin/login-search.md
+      - 미등록 번호 검토: admin/nonmember-lookup.md
+      - 요청 처리: admin/requests.md
+      - 로그인 기록·설정·권한: admin/operations.md
+  - 문제 해결: troubleshooting.md
+  - 개인정보 안내: privacy.md
+  - 용어집: glossary.md
+  - 지원 요청: support.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/image-zoom.js
+
+extra:
+  generator: false
+  social: []

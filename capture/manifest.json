@@ -1,0 +1,14 @@
+[
+  {"screen":"member-login","viewport":{"width":390,"height":844},"file":"member/login.webp","caption":"member.login"},
+  {"screen":"member-family","viewport":{"width":390,"height":844},"file":"member/family.webp","caption":"member.family"},
+  {"screen":"member-edit","viewport":{"width":390,"height":1000},"file":"member/edit.webp","caption":"member.edit"},
+  {"screen":"member-requests","viewport":{"width":390,"height":1000},"file":"member/requests.webp","caption":"member.requests"},
+  {"screen":"admin-login","viewport":{"width":1440,"height":900},"file":"admin/login.webp","caption":"admin.login"},
+  {"screen":"admin-search","viewport":{"width":1440,"height":900},"file":"admin/search.webp","caption":"admin.search"},
+  {"screen":"admin-lookup","viewport":{"width":1440,"height":900},"file":"admin/lookup.webp","caption":"admin.lookup"},
+  {"screen":"admin-requests","viewport":{"width":1440,"height":900},"file":"admin/requests.webp","caption":"admin.requests"},
+  {"screen":"admin-history","viewport":{"width":1440,"height":900},"file":"admin/history.webp","caption":"admin.history"},
+  {"screen":"admin-settings","viewport":{"width":1440,"height":900},"file":"admin/settings.webp","caption":"admin.settings"},
+  {"screen":"admin-permissions","viewport":{"width":1440,"height":900},"file":"admin/permissions.webp","caption":"admin.permissions"},
+  {"screen":"member-family","viewport":{"width":1440,"height":900},"file":"member/family-desktop.webp","caption":"member.family_desktop"}
+]
