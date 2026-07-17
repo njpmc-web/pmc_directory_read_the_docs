@@ -41,4 +41,4 @@ Every Markdown file under `docs/ko` must have the same relative path under `docs
 4. Push the tag. Read the Docs builds the activated release as `stable`; keep `stable` as the project default.
 
 Initial public repository: `https://github.com/njpmc-web/pmc_directory_read_the_docs`  
-Preferred Read the Docs project slug: `pmc-directory-manual` (fallback: `njpmc-pmc-directory-manual`).
+Read the Docs project: `https://pmc-directory-read-the-docs.readthedocs.io/`.
