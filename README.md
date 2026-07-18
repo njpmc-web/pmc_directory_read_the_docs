@@ -27,7 +27,13 @@ npm ci
 npm run capture
 ```
 
-`capture/manifest.json` is the single list of fixture screens, viewports, output files, and caption keys. The fixture is local-only and never reads authentication, network, or Supabase data. It is not copied into the built MkDocs site.
+`capture/manifest.json` is the shared registry for review states and future captures. Only entries with `publication: "manual"` are written into the public manual; `board-only` entries never enter the capture job. The fixture is local-only and never reads authentication, network, or Supabase data. It is not copied into the built MkDocs site.
+
+## Member flow review board
+
+The current-UI review board is rendered from the real production components in the sibling `pmc_directory` project. Run `npm run dev` there and open `http://127.0.0.1:3000/review`. Stable fixture screen URLs under `/review/screen?id=...` are intended to become future documentation capture targets.
+
+Private reference captures belong only in the git-ignored `screenshots/` directory. They are used for scale and state validation and are never embedded in review or documentation assets.
 
 ## Translation workflow
 

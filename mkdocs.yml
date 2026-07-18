@@ -53,6 +53,7 @@ plugins:
             정보 수정 및 인증: Edits and verification
             사진 요청: Photo requests
             요청 관리: Manage requests
+            관리자 확인요청: Admin confirmation request
             직원: Staff
             관리자 로그인 및 교인 검색: Admin sign-in and member search
             미등록 번호 검토: Unregistered-number review
@@ -74,6 +75,7 @@ nav:
       - 정보 수정 및 인증: member/edit.md
       - 사진 요청: member/photos.md
       - 요청 관리: member/requests.md
+      - 관리자 확인요청: member/admin-confirmation.md
   - 직원:
       - 관리자 로그인 및 교인 검색: admin/login-search.md
       - 미등록 번호 검토: admin/nonmember-lookup.md

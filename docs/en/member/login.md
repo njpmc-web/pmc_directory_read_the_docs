@@ -2,30 +2,37 @@
 
 ## Goal
 
-Verify your identity with a phone or email registered in the directory, then open your family profile.
+Verify your identity with the phone registered in the church directory and open your family information.
 
 ## Before you begin
 
-- You must be able to receive messages at a registered phone or email.
-- Never share the six-digit SMS/email verification code.
+- You must be able to receive SMS messages at the registered phone.
+- Never share the six-digit verification code.
 
 ## Steps
 
-1. Enter your phone and choose **인증번호 받기** (get verification code).
-2. To use email, choose **이메일로 로그인** and enter the registered email.
-3. Enter the six-digit code before it expires. The family page opens after success.
+1. On **휴대폰인증으로 로그인** (sign in by phone verification), enter your phone in **휴대폰 번호**.
+2. When the button becomes active, choose **인증번호 받기** (get verification code).
 
-<figure class="mobile-shot">
-  <img src="../../../assets/images/member/login.webp" alt="Member SMS sign-in screen with a synthetic phone number">
-  <figcaption>Steps 1–2: choose SMS or email sign-in.</figcaption>
+<figure class="device-shot">
+  <img src="../../../assets/images/review-framed/auth-phone-complete.png" alt="Member sign-in screen with a phone entered and the get-verification-code button enabled">
+  <figcaption>Enter the phone, then choose <strong>인증번호 받기</strong>.</figcaption>
 </figure>
+
+3. When **인증번호를 보냈습니다.** confirms that the code was sent, enter the six SMS digits in the six **인증번호** boxes.
+4. Check the time remaining and choose **로그인** (sign in). Use **번호 다시 입력** to return and correct the phone.
+
+<figure class="device-shot">
+  <img src="../../../assets/images/review-framed/auth-otp-sent.png" alt="Verification-code screen with six input boxes a sign-in button and code-sent confirmation">
+  <figcaption>After the sent confirmation appears, enter the six-digit code and choose <strong>로그인</strong>.</figcaption>
+</figure>
+
+To use a registered email instead, choose **Use email** at the bottom. Email sign-in also uses **인증번호 받기** followed by a six-digit code.
 
 ## Successful result
 
-The **우리 가족 정보** heading and your family members appear.
+Sign-in completes and your household name and family information appear.
 
-## Common problems
+## Next step
 
-- **Unregistered number:** check it, then start the admin verification request if needed.
-- **Expired/incorrect code:** request one new code and use only the newest one.
-- **No SMS:** check country code, blocked messages, and connectivity, or use email sign-in.
+Continue to [Family information](family.md). If the app cannot find the registered phone, choose **관리자 확인 요청** on the sign-in screen and follow [Admin confirmation request](admin-confirmation.md). For code problems, see [Troubleshooting](../troubleshooting.md).

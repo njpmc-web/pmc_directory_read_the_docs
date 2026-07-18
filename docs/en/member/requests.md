@@ -2,27 +2,36 @@
 
 ## Goal
 
-Review request status and workflow details, cancel eligible requests, or delete canceled history.
+Read each submitted request’s target, request number, verification, responsible role, and current processing status.
 
 ## Before you begin
 
-- Sign in and open **요청 내역**.
+- Sign in as a member and find **요청 내역** (request history) below the family information.
+- Knowing the changed field or approximate submission time makes a request easier to find.
 
 ## Steps
 
-1. Check field, request number, responsible role, and status.
-2. Open **상세 보기** for before/after values, notes, and phone/email verification.
-3. A request still at **접수** can be withdrawn with **요청 취소**.
-4. Remove a **취소** entry from your view with **기록 삭제**.
-5. On a shared device, always **로그아웃** when finished.
+1. Under **처리 상태** (processing status), find the request card. Its title follows `member name · field` or `가족 · 가족 사진` (family · family photo).
+2. Read the status at the card’s right.
 
-<figure class="mobile-shot"><img src="../../../assets/images/member/requests.webp" alt="Synthetic requests showing received verified reviewing and canceled states"><figcaption>Steps 1–4: review status/details and available cancellation actions.</figcaption></figure>
+    - **접수**: received and waiting for the responsible person.
+    - **확인 중**: the responsible person is reviewing it.
+    - **입력 완료**: the new value has been entered and awaits final confirmation.
+    - **반영 확인**: the change has been confirmed as applied.
+
+3. Note `Request #number` and `담당: role` (responsible role). Use the request number if you need support.
+4. For value changes, compare the old value with the requested value after the arrow. A phone request also shows `Verified` or `Unverified` for verification of the new phone.
+5. For photo requests, confirm the requested preview and any **요청 메모** (request note).
+
+<figure class="device-shot">
+  <img src="../../../assets/images/review-framed/requests-statuses.png" alt="Request history showing field request number responsible role before and after values verification badge and status">
+  <figcaption>Use each card to read the field, <strong>Request #</strong>, responsible role, verification, and processing status.</figcaption>
+</figure>
 
 ## Successful result
 
-Active requests show their latest state; cancel/delete remains effective after refresh.
+The submitted request appears for the correct person and field, with a request number, responsible role, and current status.
 
-## Common problems
+## Next step
 
-- **No cancel button:** staff may already have started processing it.
-- **Status unchanged for a long time:** contact support with the request number.
+Return to this screen until processing is complete. For cancellation, rejection, submission failure, or a status that does not change, see [Troubleshooting](../troubleshooting.md).

@@ -17,4 +17,15 @@
 .md-typeset figcaption { color: #475569; font-size: .75rem; max-width: 48rem; }
 .md-typeset .mobile-shot img { max-width: 390px; width: 100%; }
 .md-typeset .desktop-shot img { width: 100%; }
+.md-typeset .device-shot { text-align: center; }
+.md-typeset .device-shot img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+  margin-inline: auto;
+  max-height: none;
+  max-width: 454px;
+  width: 100%;
+}
 @media (max-width: 600px) { .md-typeset figure { margin-inline: 0; } }

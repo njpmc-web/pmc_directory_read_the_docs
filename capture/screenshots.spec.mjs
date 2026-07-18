@@ -8,7 +8,7 @@ const manifest = JSON.parse(await readFile(new URL("./manifest.json", import.met
 const outputRoot = path.resolve("docs/assets/images");
 const fixtureUrl = pathToFileURL(path.resolve("capture/fixture.html")).href;
 
-for (const item of manifest) {
+for (const item of manifest.filter((entry) => entry.publication === "manual")) {
   test(`${item.caption} (${item.viewport.width}px)`, async ({ page }) => {
     await page.setViewportSize(item.viewport);
     await page.goto(`${fixtureUrl}?screen=${encodeURIComponent(item.screen)}`, { waitUntil: "load" });
