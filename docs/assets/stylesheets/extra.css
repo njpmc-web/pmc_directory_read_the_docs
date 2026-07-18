@@ -21,6 +21,22 @@
 .md-typeset .mobile-shot img { max-width: 390px; width: 100%; }
 .md-typeset .desktop-shot img { width: 100%; }
 .md-typeset .device-shot { text-align: center; }
+.md-typeset .workflow-animation {
+  margin-block: 1.5rem 2rem;
+  text-align: center;
+}
+.md-typeset .workflow-animation img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: default;
+  display: block;
+  height: auto;
+  margin-inline: auto;
+  max-height: 520px;
+  max-width: 100%;
+  width: auto;
+}
 .md-typeset .shot-sequence {
   margin: 1.5rem auto;
   max-width: 340px;
@@ -149,6 +165,7 @@
   to { transform: scale(1); }
 }
 @media (min-width: 60rem) {
+  .md-typeset .workflow-animation img { max-height: 480px; }
   .md-typeset .shot-sequence { max-width: 300px; }
   .md-typeset .shot-sequence--primary { max-width: 320px; }
   .md-typeset .shot-sequence .device-shot img {

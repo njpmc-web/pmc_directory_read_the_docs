@@ -45,23 +45,26 @@ test("mobile navigation renders", async ({ page }) => {
   expect(await mobileSequence.locator("figure.device-shot.is-active img").evaluate((image) => image.getBoundingClientRect().width)).toBeLessThanOrEqual(340);
 });
 
-test("quick start leads with an animated member walkthrough", async ({ page }) => {
+test("quick start leads with a compact animated workflow GIF", async ({ page }) => {
   await page.goto(`${base}/quick-start/`);
   expect(await page.locator(".md-header").evaluate((element) => getComputedStyle(element).backgroundColor)).toBe("rgb(51, 65, 85)");
-  const sequence = page.locator(".shot-sequence--primary.is-enhanced");
-  await expect(sequence).toBeVisible();
-  await expect(sequence.locator("figure.device-shot")).toHaveCount(5);
-  await expect(sequence.locator("figure.device-shot.is-active")).toHaveCount(1);
-  await expect(sequence.locator(".shot-sequence__status")).toHaveText("1 / 5");
-  await expect(sequence.locator(".shot-sequence__progress-bar")).toHaveCSS("animation-name", "shot-sequence-progress");
-  await expect(sequence.locator(".shot-sequence__status")).toHaveText("2 / 5", { timeout: 4000 });
-  expect(await sequence.locator("figure.device-shot.is-active img").evaluate((image) => image.getBoundingClientRect().height)).toBeLessThanOrEqual(520);
+  const animation = page.locator("figure.workflow-animation img");
+  await expect(animation).toBeVisible();
+  await expect(animation).toHaveAttribute("src", /member-workflow\.gif$/);
+  await expect(animation).toHaveJSProperty("complete", true);
+  const imageData = await animation.evaluate((image) => ({
+    naturalWidth: image.naturalWidth,
+    naturalHeight: image.naturalHeight,
+    renderedHeight: image.getBoundingClientRect().height,
+  }));
+  expect(imageData.naturalWidth).toBe(320);
+  expect(imageData.naturalHeight).toBe(648);
+  expect(imageData.renderedHeight).toBeLessThanOrEqual(480);
   await expect(page.getByRole("heading", { level: 2, name: "회원 5단계" })).toBeVisible();
 
   await page.goto(`${base}/en/quick-start/`);
-  await expect(page.locator(".shot-sequence--primary.is-enhanced")).toBeVisible();
+  await expect(page.locator("figure.workflow-animation img[src$='member-workflow.gif']")).toBeVisible();
   await expect(page.getByRole("heading", { level: 2, name: "Five steps for members" })).toBeVisible();
-  await expect(page.getByRole("button", { name: "Pause" })).toBeVisible();
 });
 
 test("admin confirmation pages and framed device figures are published in both languages", async ({ page }) => {

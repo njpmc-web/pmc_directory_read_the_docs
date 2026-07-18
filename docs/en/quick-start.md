@@ -1,29 +1,11 @@
 # Quick Start
 
-The main member flow is **sign in → review family → submit a verified edit → request a photo → check request status**. The walkthrough below automatically plays the real screens in that order.
+The main member flow is **sign in → review family → submit a verified edit → request a photo → check request status**. The GIF below continuously plays the real screens in that order.
 
-<div class="shot-sequence shot-sequence--primary" data-shot-sequence>
-<figure class="device-shot">
-  <img src="../../assets/images/review-framed/auth-phone-complete.png" alt="Member sign-in screen showing a phone and the get-verification-code button">
-  <figcaption>1. Enter the phone and choose <strong>인증번호 받기</strong>.</figcaption>
+<figure class="workflow-animation">
+  <img src="../../assets/images/animations/member-workflow.gif" alt="Animated member workflow from sign-in through family review, phone verification, family-photo request, and request status">
+  <figcaption>Five-screen member workflow · loops automatically</figcaption>
 </figure>
-<figure class="device-shot">
-  <img src="../../assets/images/review-framed/family-summary.png" alt="Family summary showing household name directory number member count and family photo">
-  <figcaption>2. Review the household name, directory number, members, and family photo.</figcaption>
-</figure>
-<figure class="device-shot">
-  <img src="../../assets/images/review-framed/phone-change-otp-success.png" alt="Phone edit request showing verification complete and a Verified badge">
-  <figcaption>3. Verify the new phone and confirm <strong>Verified</strong>.</figcaption>
-</figure>
-<figure class="device-shot">
-  <img src="../../assets/images/review-framed/photo-family-success.png" alt="Family-photo request received with the new photo labeled Requested">
-  <figcaption>4. Send the family-photo request and confirm <strong>Requested</strong>.</figcaption>
-</figure>
-<figure class="device-shot">
-  <img src="../../assets/images/review-framed/requests-statuses.png" alt="Request history showing request numbers responsible roles verification and processing statuses">
-  <figcaption>5. Read the request number, responsible role, verification, and status.</figcaption>
-</figure>
-</div>
 
 ## Five steps for members
 

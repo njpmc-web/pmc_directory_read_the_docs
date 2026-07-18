@@ -1,29 +1,11 @@
 # 빠른 시작
 
-회원의 기본 흐름은 **로그인 → 가족 확인 → 인증된 수정 요청 → 사진 요청 → 요청 상태 확인**입니다. 아래 화면 안내가 실제 순서대로 자동 재생됩니다.
+회원의 기본 흐름은 **로그인 → 가족 확인 → 인증된 수정 요청 → 사진 요청 → 요청 상태 확인**입니다. 아래 GIF가 실제 화면을 순서대로 반복 재생합니다.
 
-<div class="shot-sequence shot-sequence--primary" data-shot-sequence>
-<figure class="device-shot">
-  <img src="../assets/images/review-framed/auth-phone-complete.png" alt="휴대폰 번호와 인증번호 받기 버튼이 표시된 회원 로그인 화면">
-  <figcaption>1. 휴대폰 번호를 입력하고 <strong>인증번호 받기</strong>를 선택합니다.</figcaption>
+<figure class="workflow-animation">
+  <img src="../assets/images/animations/member-workflow.gif" alt="로그인부터 가족 확인, 휴대폰 인증, 가족 사진 요청, 요청 상태 확인까지 자동 재생되는 회원 업무 흐름">
+  <figcaption>회원 5단계 화면 흐름 · 자동 반복 재생</figcaption>
 </figure>
-<figure class="device-shot">
-  <img src="../assets/images/review-framed/family-summary.png" alt="가정 이름 교적번호 구성원 수와 가족 사진이 표시된 가족 요약 화면">
-  <figcaption>2. 가정 이름, 교적번호, 구성원과 가족 사진을 확인합니다.</figcaption>
-</figure>
-<figure class="device-shot">
-  <img src="../assets/images/review-framed/phone-change-otp-success.png" alt="휴대폰 인증 완료 안내와 Verified 배지가 표시된 수정 요청 화면">
-  <figcaption>3. 새 휴대폰 번호를 인증하고 <strong>Verified</strong>를 확인합니다.</figcaption>
-</figure>
-<figure class="device-shot">
-  <img src="../assets/images/review-framed/photo-family-success.png" alt="가족 사진 변경 요청 접수 안내와 Requested 사진이 표시된 화면">
-  <figcaption>4. 가족 사진 요청을 보내고 <strong>Requested</strong>를 확인합니다.</figcaption>
-</figure>
-<figure class="device-shot">
-  <img src="../assets/images/review-framed/requests-statuses.png" alt="여러 변경 요청의 요청 번호 담당 역할 인증과 처리 상태가 표시된 화면">
-  <figcaption>5. 요청 번호, 담당, 인증 여부와 처리 상태를 확인합니다.</figcaption>
-</figure>
-</div>
 
 ## 회원 5단계
 
