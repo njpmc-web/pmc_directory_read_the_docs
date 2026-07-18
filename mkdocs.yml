@@ -21,8 +21,8 @@ theme:
     - search.suggest
     - content.tooltips
   palette:
-    primary: light blue
-    accent: blue
+    primary: custom
+    accent: custom
 
 plugins:
   - search:
@@ -100,6 +100,7 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/image-zoom.js
+  - assets/javascripts/shot-sequence.js
 
 extra:
   generator: false

@@ -14,19 +14,20 @@
 1. 상단에서 가정 이름을 확인합니다.
 2. **가정 정보** 카드에서 **교적번호**, 가족 구성원 수, 가족 대표 사진을 확인합니다. 가족 사진의 카메라 버튼은 사진 변경 요청을 시작하는 기능입니다.
 
-<figure class="device-shot">
-  <img src="../../assets/images/review-framed/family-summary.png" alt="가정 이름 교적번호 구성원 수와 가족 대표 사진이 표시된 가족 요약 화면">
-  <figcaption>가정 이름과 <strong>교적번호</strong>, 구성원 수, 가족 대표 사진을 먼저 확인합니다.</figcaption>
-</figure>
-
 3. 아래로 이동해 구성원 카드를 차례로 확인합니다. 각 카드에는 이름, 직분, 가족 관계, 나이와 개인 사진이 먼저 표시됩니다.
 4. 이어서 **영문 이름**, **휴대폰**, **이메일**, **주소**, **교적번호**를 순서대로 확인합니다. 값이 없는 항목은 `-`로 표시될 수 있습니다.
 5. 변경할 수 있는 항목 옆에는 **수정** 버튼이 있습니다. 개인 사진의 카메라 버튼은 해당 구성원의 사진 요청을 시작합니다.
 
+<div class="shot-sequence" data-shot-sequence>
+<figure class="device-shot">
+  <img src="../../assets/images/review-framed/family-summary.png" alt="가정 이름 교적번호 구성원 수와 가족 대표 사진이 표시된 가족 요약 화면">
+  <figcaption>가정 이름과 <strong>교적번호</strong>, 구성원 수, 가족 대표 사진을 먼저 확인합니다.</figcaption>
+</figure>
 <figure class="device-shot">
   <img src="../../assets/images/review-framed/family-members.png" alt="가족 구성원의 이름 관계 나이 사진 연락처 주소와 수정 버튼이 표시된 화면">
   <figcaption>구성원별 사진과 연락처를 확인하고 필요한 항목의 <strong>수정</strong>을 선택합니다.</figcaption>
 </figure>
+</div>
 
 ## 성공 결과
 
