@@ -53,8 +53,9 @@ test("quick start leads with an animated member walkthrough", async ({ page }) =
   await expect(sequence.locator("figure.device-shot")).toHaveCount(5);
   await expect(sequence.locator("figure.device-shot.is-active")).toHaveCount(1);
   await expect(sequence.locator(".shot-sequence__status")).toHaveText("1 / 5");
-  await sequence.getByRole("button", { name: "다음 화면" }).click();
-  await expect(sequence.locator(".shot-sequence__status")).toHaveText("2 / 5");
+  await expect(sequence.locator(".shot-sequence__progress-bar")).toHaveCSS("animation-name", "shot-sequence-progress");
+  await expect(sequence.locator(".shot-sequence__status")).toHaveText("2 / 5", { timeout: 4000 });
+  expect(await sequence.locator("figure.device-shot.is-active img").evaluate((image) => image.getBoundingClientRect().height)).toBeLessThanOrEqual(520);
   await expect(page.getByRole("heading", { level: 2, name: "회원 5단계" })).toBeVisible();
 
   await page.goto(`${base}/en/quick-start/`);

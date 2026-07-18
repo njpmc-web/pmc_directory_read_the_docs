@@ -51,6 +51,9 @@
   visibility: visible;
   z-index: 1;
 }
+.md-typeset .shot-sequence.is-enhanced .device-shot.is-active img {
+  animation: shot-sequence-drift 2.6s ease-out both;
+}
 .md-typeset .shot-sequence figcaption {
   font-size: .72rem;
   line-height: 1.35;
@@ -62,6 +65,23 @@
   gap: .45rem;
   grid-template-columns: auto 1fr auto auto;
   margin-top: .65rem;
+}
+.md-typeset .shot-sequence__progress {
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  height: 3px;
+  margin-top: .65rem;
+  overflow: hidden;
+}
+.md-typeset .shot-sequence__progress-bar {
+  background: var(--md-accent-fg-color);
+  display: block;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.md-typeset .shot-sequence.is-playing .shot-sequence__progress-bar {
+  animation: shot-sequence-progress 2.6s linear forwards;
 }
 .md-typeset .shot-sequence__button {
   align-items: center;
@@ -121,10 +141,29 @@
   max-width: 454px;
   width: 100%;
 }
+@keyframes shot-sequence-progress {
+  to { transform: scaleX(1); }
+}
+@keyframes shot-sequence-drift {
+  from { transform: scale(.992); }
+  to { transform: scale(1); }
+}
+@media (min-width: 60rem) {
+  .md-typeset .shot-sequence { max-width: 300px; }
+  .md-typeset .shot-sequence--primary { max-width: 320px; }
+  .md-typeset .shot-sequence .device-shot img {
+    max-height: 520px;
+    width: auto;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .md-typeset .shot-sequence.is-enhanced .device-shot {
     transform: none;
     transition: none;
+  }
+  .md-typeset .shot-sequence.is-enhanced .device-shot.is-active img,
+  .md-typeset .shot-sequence.is-playing .shot-sequence__progress-bar {
+    animation: none;
   }
 }
 @media (max-width: 600px) { .md-typeset figure { margin-inline: 0; } }

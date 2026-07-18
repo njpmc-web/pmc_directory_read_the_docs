@@ -1,5 +1,5 @@
 (() => {
-  const intervalMs = 4000;
+  const intervalMs = 2600;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const korean = document.documentElement.lang.toLowerCase().startsWith("ko");
   const copy = korean
@@ -15,6 +15,13 @@
     stage.setAttribute("aria-label", copy.sequence);
     frames[0].before(stage);
     frames.forEach((frame) => stage.append(frame));
+
+    const progress = document.createElement("div");
+    progress.className = "shot-sequence__progress";
+    progress.setAttribute("aria-hidden", "true");
+    const progressBar = document.createElement("span");
+    progressBar.className = "shot-sequence__progress-bar";
+    progress.append(progressBar);
 
     const controls = document.createElement("div");
     controls.className = "shot-sequence__controls";
@@ -36,7 +43,7 @@
       dots.append(dot);
       return dot;
     });
-    sequence.append(controls, dots);
+    sequence.append(progress, controls, dots);
     sequence.classList.add("is-enhanced");
 
     let active = 0;
@@ -54,6 +61,7 @@
       status.textContent = `${active + 1} / ${frames.length}`;
       if (!announce) status.setAttribute("aria-live", "off");
       window.requestAnimationFrame(() => status.setAttribute("aria-live", "polite"));
+      restartProgress();
     }
 
     function updateToggle() {
@@ -64,11 +72,21 @@
     function stop() {
       window.clearInterval(timer);
       timer = 0;
+      sequence.classList.remove("is-playing");
     }
 
     function start() {
       stop();
-      if (!paused && !document.hidden) timer = window.setInterval(() => show(active + 1), intervalMs);
+      if (!paused && !document.hidden) {
+        timer = window.setInterval(() => show(active + 1), intervalMs);
+        restartProgress();
+      }
+    }
+
+    function restartProgress() {
+      sequence.classList.remove("is-playing");
+      void progressBar.offsetWidth;
+      if (!paused && !document.hidden) sequence.classList.add("is-playing");
     }
 
     function select(index) {
@@ -84,8 +102,6 @@
       start();
     });
     dotButtons.forEach((dot, index) => dot.addEventListener("click", () => select(index)));
-    sequence.addEventListener("mouseenter", stop);
-    sequence.addEventListener("mouseleave", start);
     sequence.addEventListener("focusin", stop);
     sequence.addEventListener("focusout", (event) => {
       if (!sequence.contains(event.relatedTarget)) start();
